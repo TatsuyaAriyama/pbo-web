@@ -72,3 +72,59 @@ SYSTEM_PROMPT = f"""
   "explanation_30sec": "..."
 }}
 """
+# =========================
+# Setup
+# =========================
+load_dotenv()
+api_key = os.getenv("OPENAI_API_KEY")
+if not api_key:
+    raise RuntimeError("OPENAI_API_KEY が見つかりません。.env を確認してください。")
+
+client = OpenAI(api_key=api_key)
+OUTPUT_DIR = Path("outputs")
+OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+
+
+def count_chars(text: str) -> int:
+    # 改行や空白込みでカウント
+    return len(text)
+
+
+def safe_filename(text: str, max_len: int = 40) -> str:
+    """
+    保存ファイル名を安全なASCIIへ寄せる
+    例:
+      "githubについて" -> "github"
+      "TypeScript Union型" -> "typescript_union"
+      （英数が無ければ topic）
+    """
+    text = text.strip().lower()
+    text = re.sub(r"[^a-z0-9_-]+", "_", text)
+    text = text.strip("_")
+    return (text[:max_len] or "topic")
+
+
+def input_multiline(prompt: str) -> str:
+    print(prompt)
+    print("入力後、空行で終了（Enterを2回）")
+    lines = []
+    while True:
+        line = input()
+        if line == "":
+            break
+        lines.append(line)
+    return "\n".join(lines).strip()
+
+
+def validate_input(topic: str, explanation: str) -> tuple[bool, str]:
+    if not topic:
+        return False, "トピック名は必須です。"
+    char_count = count_chars(explanation)
+    if char_count < MIN_CHARS:
+        remain = MIN_CHARS - char_count
+        return False, f"説明文は{MIN_CHARS}文字以上必要です（現在{char_count}文字、あと{remain}文字）。"
+    return True, ""
+
+
+def evaluate(topic: str, explanation: str) -> dict:
+    user_prompt = f"""
