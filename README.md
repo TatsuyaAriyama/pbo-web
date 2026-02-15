@@ -115,3 +115,4 @@ git push## Changelog
 - Add compact mode for quick review.
 
 ## Security Notes
+- Never commit .env or API keys.
