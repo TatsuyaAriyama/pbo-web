@@ -107,3 +107,4 @@ git push## Changelog
 - [ ] Render deployment setup verification.
 
 ## Troubleshooting
+- If localhost fails, try 127.0.0.1 and check active Streamlit process.
