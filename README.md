@@ -90,3 +90,5 @@ git add README.md
 git commit -m "docs: add next action note"
 git push## Changelog
 - 2026-02-15: improved README structure.
+
+## Notes
