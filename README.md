@@ -99,3 +99,4 @@ git push## Changelog
 - 2026-02-16: added lightweight docs updates.
 
 ## Notes
+- Keep commits small and meaningful.
