@@ -92,3 +92,4 @@ git push## Changelog
 - 2026-02-15: improved README structure.
 
 ## Notes
+- Keep commits small and meaningful.
