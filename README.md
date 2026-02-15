@@ -24,3 +24,68 @@ $EOF
 - [ ] Team login support
 - [ ] Dashboard for tag trends
 - Usage: Enter topic + 60+ chars, then click 診断する.
+cat >> README.md << 'EOF'
+
+## FAQ
+
+- Q. 何文字から診断できますか？
+  - A. 60文字以上です。
+- Q. 結果はどこに保存されますか？
+  - A. `outputs/*.json` に保存されます。
+EOF
+
+git add README.md
+git commit -m "docs: add FAQ section"
+git push
+cat >> README.md << 'EOF'
+
+## Usage Tips
+
+- 「定義 / なぜ使うか / 具体例」の3点を書くと精度が上がります。
+- 1トピックを繰り返し説明して、改善版との差分を見るのがおすすめです。
+EOF
+
+git add README.md
+git commit -m "docs: add usage tips"
+git push
+cat >> README.md << 'EOF'
+
+## Version
+
+- v0.1.0: Streamlit UI + AI診断 + 履歴保存
+EOF
+
+git add README.md
+git commit -m "docs: add version note"
+git push
+cat >> README.md << 'EOF'
+
+## Changelog
+EOF
+
+git add README.md
+git commit -m "docs: add changelog header"
+git push
+echo "- 2026-02-15: improved README structure." >> README.md
+
+git add README.md
+git commit -m "docs: add changelog entry for README"
+git push
+cat >> README.md << 'EOF'
+
+## Notes
+EOF
+
+git add README.md
+git commit -m "docs: add notes header"
+git push
+echo "- Keep commits small and meaningful." >> README.md
+
+git add README.md
+git commit -m "docs: add workflow note"
+git push
+echo "- Next: deploy to Render and share internal URL." >> README.md
+
+git add README.md
+git commit -m "docs: add next action note"
+git push## Changelog
