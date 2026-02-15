@@ -112,3 +112,4 @@ git push## Changelog
 ## UI Ideas
 - Add score trend chart per topic.
 - Add clearer success/error toasts.
+- Add compact mode for quick review.
