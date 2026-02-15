@@ -23,3 +23,4 @@ $EOF
 - [ ] Topic-specific previous-score comparison
 - [ ] Team login support
 - [ ] Dashboard for tag trends
+- Usage: Enter topic + 60+ chars, then click 診断する.
