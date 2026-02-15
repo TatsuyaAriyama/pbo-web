@@ -113,3 +113,5 @@ git push## Changelog
 - Add score trend chart per topic.
 - Add clearer success/error toasts.
 - Add compact mode for quick review.
+
+## Security Notes
