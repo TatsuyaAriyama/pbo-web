@@ -96,3 +96,4 @@ git push## Changelog
 - Next: deploy to Render and share internal URL.
 
 ## Changelog
+- 2026-02-16: added lightweight docs updates.
