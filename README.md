@@ -116,3 +116,4 @@ git push## Changelog
 
 ## Security Notes
 - Never commit .env or API keys.
+- Use environment variables on hosting platforms.
