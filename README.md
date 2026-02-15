@@ -93,3 +93,4 @@ git push## Changelog
 
 ## Notes
 - Keep commits small and meaningful.
+- Next: deploy to Render and share internal URL.
