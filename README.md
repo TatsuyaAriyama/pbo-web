@@ -18,3 +18,8 @@ pip install -r requirements.txt
 ```bash
 python -m streamlit run web_app.py
 $EOF
+
+## Roadmap
+- [ ] Topic-specific previous-score comparison
+- [ ] Team login support
+- [ ] Dashboard for tag trends
