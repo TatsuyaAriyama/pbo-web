@@ -110,3 +110,4 @@ git push## Changelog
 - If localhost fails, try 127.0.0.1 and check active Streamlit process.
 
 ## UI Ideas
+- Add score trend chart per topic.
