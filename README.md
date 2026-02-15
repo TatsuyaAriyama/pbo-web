@@ -104,3 +104,4 @@ git push## Changelog
 
 ## Milestones
 - [x] Local Streamlit app is running.
+- [ ] Render deployment setup verification.
