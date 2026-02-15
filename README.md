@@ -103,3 +103,4 @@ git push## Changelog
 - Next: deploy to Render and share internal URL.
 
 ## Milestones
+- [x] Local Streamlit app is running.
