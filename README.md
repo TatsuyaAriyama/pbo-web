@@ -14,3 +14,7 @@
 python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
+## Quick Run
+```bash
+python -m streamlit run web_app.py
+$EOF
